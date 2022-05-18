@@ -1,0 +1,93 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
+
+    &__box {
+        display: flex;
+        gap: 70px;
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__address {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        color: var(--theme-accent);
+    }
+
+    &__socials {
+        padding-top: 12px;
+    }
+
+    &__subscribe {
+        margin-left: auto;
+        padding-top: 12px;
+    }
+
+    &__call-heading {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--theme-accent);
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+    }
+
+    &__send-icons {
+        margin-left: 10px;
+    }
+}
+
+.footer__contact {
+    margin-top: 9px;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--theme-contacts);
+
+    transition: color var(--typical-transition-duration) var(--typical-transition-timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--theme-accent);
+        opacity: 1;
+    }
+}
+
+.footer__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--theme-accent);
+    background-color: transparent;
+
+    transition: border-color var(--typical-transition-duration) var(--typical-transition-timing-function);
+
+    &:hover {
+        border-color: var(--theme-accent);
+    }
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        color: var(--theme-contacts);
+    }
+}

@@ -1,0 +1,16 @@
+.header {
+    border-bottom: 1px solid var(--theme-header-border);
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 93px;
+    }
+
+    &__contacts {
+        margin-left: auto;
+    }
+}
