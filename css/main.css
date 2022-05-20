@@ -714,8 +714,16 @@ address {
 .portfolio__buttons {
   display: flex;
   gap: 8px;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__buttons {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .portfolio__projects {
@@ -725,7 +733,19 @@ address {
 }
 
 .portfolio__project {
-  width: 370px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__project {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__project {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio__btn {
