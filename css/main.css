@@ -563,13 +563,37 @@ address {
 }
 
 .footer__box {
-  display: flex;
-  gap: 70px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__tablet {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__tablet {
+    display: flex;
+    gap: 70px;
+  }
 }
 
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+}
+
+.footer__contacts {
+  margin-bottom: 60px;
 }
 
 .footer__address {
@@ -581,12 +605,26 @@ address {
 }
 
 .footer__socials {
-  padding-top: 12px;
+  margin-bottom: 60px;
 }
 
-.footer__subscribe {
-  margin-left: auto;
-  padding-top: 12px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__socials {
+    padding-top: 7px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__socials {
+    padding-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__subscribe {
+    margin-left: auto;
+    padding-top: 12px;
+  }
 }
 
 .footer__call-heading {
@@ -598,11 +636,24 @@ address {
   color: var(--theme-accent);
 }
 
+@media screen and (max-width: 1199px) {
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .footer__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__btn {
+    margin-left: 12px;
+  }
 }
 
 .footer__send-icons {
@@ -625,7 +676,7 @@ address {
 }
 
 .footer__input {
-  width: 358px;
+  width: calc(100% - 30px);
   height: 50px;
   padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -634,7 +685,20 @@ address {
   line-height: 1.25;
   color: var(--theme-accent);
   background-color: transparent;
+  margin-bottom: 20px;
   transition: border-color var(--typical-transition-duration) var(--typical-transition-timing-function);
+}
+
+@media screen and (min-width: 480px) {
+  .footer__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__input {
+    width: 358px;
+  }
 }
 
 .footer__input:hover {
