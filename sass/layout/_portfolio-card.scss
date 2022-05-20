@@ -1,5 +1,6 @@
 .card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 
     transition: box-shadow var(--typical-transition-duration) var(--typical-transition-timing-function);
@@ -16,6 +17,7 @@
     }
 
     &__specification {
+        flex-grow: 1;
         padding-top: 20px;;
         padding-bottom: 20px;
         padding-right: 24px;
