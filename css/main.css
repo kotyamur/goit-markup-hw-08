@@ -215,10 +215,17 @@ address {
   border-bottom: 1px solid var(--theme-header-border);
 }
 
+@media screen and (max-width: 479px) {
+  .header__box {
+    padding-left: 15px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header__box {
     position: relative;
-    padding: 16px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -272,6 +279,113 @@ address {
 @media screen and (max-width: 767px) {
   .navigation {
     display: none;
+  }
+}
+
+.menu-mob-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 48px 40px;
+  background-color: #FFFFFF;
+  z-index: 999;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--typical-transition-duration) var(--typical-transition-timing-function), visibility var(--typical-transition-duration) var(--typical-transition-timing-function);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-mob-container {
+    display: none;
+  }
+}
+
+.menu-mob-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.menu-mob-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.menu-mob-nav {
+  margin-bottom: 40px;
+}
+
+.menu-mob-item {
+  font-size: 40px;
+  line-height: 1.18;
+  color: var(--theme-heading);
+}
+
+.menu-mob-item:hover, .menu-mob-item:focus {
+  color: var(--theme-hover);
+}
+
+.menu-mob-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-mob-tel {
+  display: block;
+  font-size: 34px;
+  line-height: 1.18;
+  color: var(--theme-hover);
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 479px) {
+  .menu-mob-tel {
+    font-size: 7vw;
+  }
+}
+
+.menu-mob-mail {
+  display: block;
+  font-size: 24px;
+  line-height: 1.17;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 479px) {
+  .menu-mob-mail {
+    font-size: 5vw;
+  }
+}
+
+.menu-mob-links {
+  display: flex;
+}
+
+.menu-mob-soc {
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--theme-hover);
+}
+
+.menu-mob-soc:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-mob-soc:not(:first-child) {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .menu-mob-soc {
+    font-size: 3.8vw;
   }
 }
 
@@ -937,6 +1051,10 @@ address {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .modal {
