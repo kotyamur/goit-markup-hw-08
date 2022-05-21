@@ -2,15 +2,55 @@
     border-bottom: 1px solid var(--theme-header-border);
 
     &__box {
-        // display: flex;
-        align-items: center;
+        @media screen and (max-width: 767px) {
+            position: relative;
+            padding: 16px 0;
+        }
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__logo {
-        margin-right: 93px;
+        margin-right: 88px;
+        @media screen and (min-width: 1200px) {
+            margin-right: 93px;
+        }
+        
     }
 
     &__contacts {
         margin-left: auto;
+    }
+}
+
+.menu-toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: var(--theme-logo);
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--theme-hover);
+    }
+}
+
+.navigation {
+    @media screen and (max-width: 767px) {
+        display: none;
     }
 }
