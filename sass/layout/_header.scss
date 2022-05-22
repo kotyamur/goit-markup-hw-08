@@ -67,6 +67,12 @@
     left: 0;
     padding: 48px 40px;
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    letter-spacing: 0.02em;
+    font-weight: 500;
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -89,14 +95,14 @@
     }
 }
 
-.menu-mob-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    letter-spacing: 0.02em;
-    font-weight: 500;
-}
+// .menu-mob-box {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     height: 100%;
+//     letter-spacing: 0.02em;
+//     font-weight: 500;
+// }
 
 .menu-mob-nav {
     margin-bottom: 40px;

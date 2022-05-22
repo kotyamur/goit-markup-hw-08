@@ -290,6 +290,12 @@ address {
   left: 0;
   padding: 48px 40px;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  letter-spacing: 0.02em;
+  font-weight: 500;
   z-index: 999;
   overflow-y: auto;
   opacity: 0;
@@ -308,15 +314,6 @@ address {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-}
-
-.menu-mob-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  letter-spacing: 0.02em;
-  font-weight: 500;
 }
 
 .menu-mob-nav {
@@ -481,10 +478,16 @@ address {
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgImg.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/BgImg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .call {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/BgImg-mob2x.jpg);
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -496,6 +499,13 @@ address {
 @media screen and (min-width: 768px) {
   .call {
     max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/BgImg-tab.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .call {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/BgImg-tab2x.jpg);
   }
 }
 
@@ -504,6 +514,13 @@ address {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgImg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .call {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/BgImg-desc2x.jpg);
   }
 }
 
