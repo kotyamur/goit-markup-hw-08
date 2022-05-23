@@ -769,6 +769,7 @@ address {
   .footer__box {
     display: flex;
     justify-content: space-between;
+    text-align: start;
   }
 }
 
@@ -795,8 +796,10 @@ address {
   margin-bottom: 20px;
 }
 
-.footer__contacts {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer__contacts {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__address {
@@ -807,8 +810,10 @@ address {
   color: var(--theme-accent);
 }
 
-.footer__socials {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer__socials {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__call-heading {
